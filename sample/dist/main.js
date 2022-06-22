@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -107,17 +107,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mat
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sum\", function() { return sum; });\n// IIFE 방식의 모듈\r\n// var math = math || {};\r\n\r\n// (function () {\r\n//     function sum(a, b) {\r\n//         return a + b;\r\n//     }\r\n\r\n//     math.sum = sum;\r\n// })();\r\n\r\n// ES2015 표준 모듈 시스템\r\nfunction sum(a, b) {\r\n    return a + b;\r\n}\r\n\n\n//# sourceURL=webpack:///./src/math.js?");
-
-/***/ }),
-
-/***/ 0:
-/*!**************************!*\
-  !*** multi ./src/app.js ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__(/*! ./src/app.js */\"./src/app.js\");\n\n\n//# sourceURL=webpack:///multi_./src/app.js?");
 
 /***/ })
 
