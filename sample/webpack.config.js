@@ -10,4 +10,34 @@ module.exports = {
         path: path.resolve("./dist"),
         filename: "[name].js",
     },
+    module: {
+        rules: [
+            // {
+            //     test: /\.js$/, // 정규표현식 모든 .js로 끝나는 파일
+            //     use: [path.resolve("./my-webpack-loader.js")],
+            // },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"],
+            },
+            // {
+            //     test: /\.(png|jpg|gif|svg)$/,
+            //     loader: "file-loader",
+            //     options: {
+            //         publicPath: "./dist/",
+            //         name: "[name].[ext]?[hash]",
+            //     },
+            //     // use: ["file-loader"],
+            // },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: "url-loader",
+                options: {
+                    publicPath: "./dist/",
+                    name: "[name].[ext]?[hash]",
+                    limit: 20000, // 20kb
+                },
+            },
+        ],
+    },
 };
