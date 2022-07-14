@@ -15,3 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="${nyancat}" />
     `;
 });
+
+console.log(process.env.NODE_ENV); // development
+console.log(TWO); // 2라는 값 출력
+console.log(api.domain);

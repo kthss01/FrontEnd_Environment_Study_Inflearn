@@ -5,15 +5,20 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "webpack"
+        "build": "cross-env NODE_ENV=development webpack",
+        "bundle": "cross-env NODE_ENV=production webpack"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "webpack": "^4.46.0",
-        "webpack-cli": "^4.10.0"
+        "clean-webpack-plugin": "^4.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
     },
     "dependencies": {
+        "cross-env": "^7.0.3",
         "css-loader": "^5.2.7",
         "file-loader": "^6.2.0",
         "style-loader": "^1.3.0",
