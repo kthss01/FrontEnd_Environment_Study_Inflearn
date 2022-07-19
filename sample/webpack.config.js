@@ -9,7 +9,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     mode: "development",
     entry: {
-        main: "./src/app.js",
+        main: "./app.js", // root에 있는 js 테스트
+        // main: "./src/app.js",
         // main2: './src/app2.js', // 이렇게 2개 일수도 있음
     },
     output: {
@@ -48,6 +49,11 @@ module.exports = {
                     name: "[name].[ext]?[hash]",
                     limit: 20000, // 20kb
                 },
+            },
+            {
+                test: /\.js$/,
+                loader: "babel-loader",
+                exclude: "/node_modules/",
             },
         ],
     },
